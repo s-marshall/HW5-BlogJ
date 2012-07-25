@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/styles.css"}
+
+  %body
+  %div.subject
+    %p
+      = %Q{#{locals[:subject]}}
+  %hr   
+  %div.content
+    :preserve
+      #{locals[:content]}
