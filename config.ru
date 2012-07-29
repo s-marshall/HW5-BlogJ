@@ -1,3 +1,3 @@
-require './signup'
+require './secure_blog'
 
 run Sinatra::Application

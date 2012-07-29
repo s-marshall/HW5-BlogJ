@@ -6,8 +6,9 @@
     
   %body
     %h1 Bloggie
+    -# %a{:href => '/logout'}Logout
     %hr
-    %form{:method => 'post', :action => '/newpost'}
+    %form{:method => 'post', :action => '/members_only/newpost'}
       %label
         %div Subject
         %input{:type => 'text', :name => 'subject', :value => %Q{#{locals[:subject]}}}
@@ -21,8 +22,11 @@
       .error
         = %Q{#{locals[:error]}}
       %br
-      %input{:type => 'submit'}
+      %input{:type => 'submit', :value => 'Add to blog'}
+    %form{:method => 'get', :action => '/logout'}
+      %input{:type => 'submit', :value => 'Logout'}
     %hr
+    
     %div.content Blog Listing
     %hr
     - locals[:blog_listing].each do |blog|

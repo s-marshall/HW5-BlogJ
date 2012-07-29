@@ -23,4 +23,9 @@
         %p
           = %Q{#{@invalid_login}}
 
-      %input{:type => 'submit'}
+      %input{:type => 'submit', :value => 'Login'}
+    -#%a{:href => '/signup'}Register
+    %hr
+    If you have not signed up, please sign up.
+    %form{:method => 'get', :action => '/signup'}
+      %input{:type => 'submit', :value => 'Sign up'}
